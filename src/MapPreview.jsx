@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import * as maptilersdk from "@maptiler/sdk";
 
 export default function MapPreview({ coord, mapHeight }) {
-  console.log(mapHeight);
+  
   useEffect(() => {
     (async () => {
       maptilersdk.config.apiKey = import.meta.env.VITE_MAPTILER_API_KEY;
