@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import * as maptilersdk from "@maptiler/sdk";
 
-export default function MapPreview({ coord, mapHeight }) {
+export default function MapPreview({ coord }) {
   
   useEffect(() => {
     (async () => {
