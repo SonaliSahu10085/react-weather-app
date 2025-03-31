@@ -39,7 +39,7 @@ export default function SearchBox({ weatherInfoHandler }) {
         className="col-12 col-md-8 offset-md-2 offset-0"
         component="form"
         sx={{
-          p: "15px 6px",
+          p: "8px 6px",
           display: "flex",
           alignItems: "center",
           marginTop: "100px",

@@ -47,7 +47,7 @@ function IndividualRating() {
 function Ratings() {
   return (
     <div className="container py-5">
-      <h1>Ratings</h1>
+      <h4>Ratings</h4>
       <IndividualRating />
       <IndividualRating />
       <IndividualRating />

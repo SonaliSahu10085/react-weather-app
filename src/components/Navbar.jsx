@@ -14,7 +14,7 @@ function Navbar() {
       <div className="container">
         <Toolbar disableGutters>
           <Tooltip title="Welcome to weather app">
-            <IconButton sx={{ p: 0, display: "flex", mr: 1, height: 38, width: 38 }}>
+            <IconButton sx={{ p: 0, display: "flex", mr: 1, height: 30, width: 30 }}>
               <img src="./weatherlogo.png" alt="" style={{ width: "100%", height: "100%" }}/>
             </IconButton>
           </Tooltip>
@@ -25,7 +25,7 @@ function Navbar() {
               mr: 2,
               display: "flex",
               flexGrow: 1,
-              fontSize: 33,
+              fontSize: 28,
               fontWeight: 700,
               letterSpacing: ".1rem",
               background: "linear-gradient(to right, #1E88E5, #4FC3F7)",

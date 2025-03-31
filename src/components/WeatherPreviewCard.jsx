@@ -10,13 +10,22 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import moment from "moment";
 
 export default function WeatherPreviewCard({ weatherInfo }) {
-  const [like, setLike] = useState(false);
+  let [like, setLike] = useState(false);
+  let [likeCount, setLikeCount] = useState(123);
+
   const handleLikeClick = () => {
     setLike(!like);
+    if (!like) {
+      likeCount = likeCount + 1;
+      setLikeCount(likeCount);
+    } else {
+      likeCount = likeCount - 1;
+      setLikeCount(likeCount);
+    }
   };
 
   return (
-    <Card sx={{ height: "500px" }}>
+    <Card sx={{ height: "400px" }}>
       <CardHeader
         title={`${weatherInfo.location}, ${weatherInfo.country_code}`}
         subheader={moment().format("MMM DD, YYYY hh:mma")}
@@ -24,7 +33,7 @@ export default function WeatherPreviewCard({ weatherInfo }) {
 
       <CardMedia
         component="img"
-        style={{ objectFit: "contain", height: "250px"}}
+        style={{ objectFit: "contain", height: "160px" }}
         image={
           +weatherInfo.humidity > 80
             ? "./rainny.png"
@@ -51,6 +60,7 @@ export default function WeatherPreviewCard({ weatherInfo }) {
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites" onClick={handleLikeClick}>
           {like ? <ThumbUpIcon color="primary" /> : <ThumbUpIcon />}
+          <span className="fs-6 ms-1 text-primary">{likeCount}</span>
         </IconButton>
       </CardActions>
     </Card>

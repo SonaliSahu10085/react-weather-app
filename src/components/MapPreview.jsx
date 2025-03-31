@@ -25,7 +25,7 @@ export default function MapPreview({ coord }) {
     <div
       id="map"
        className="border border-light rounded-1 shadow-sm bg-body-tertiary"
-      style={{height: "500px"}}
+      style={{height: "400px"}}
     />
   );
 }

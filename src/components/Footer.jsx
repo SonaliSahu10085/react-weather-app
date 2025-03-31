@@ -4,11 +4,11 @@ export default function Footer() {
     <div
       className="bg-body-tertiary container-fluid border border-2 border-start shadow-sm p-4"
     >
-      <div className="d-flex flex-md-row justify-content-md-around align-items-md-center flex-column justify-content-center align-items-center">
+      <div className="d-flex flex-md-row justify-content-md-around align-items-md-center flex-column justify-content-center align-items-center" style={{fontSize: "14px"}}>
         <div className="mb-md-0 mb-3">Created By @Sonali Sahu</div>
         <div>
-          <b>Last Updated : </b>
-          {lastUpdated}
+          Last Updated :  
+           {lastUpdated}
         </div>
       </div>
     </div>

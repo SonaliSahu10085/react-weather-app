@@ -8,14 +8,14 @@ function RatingForm() {
       <div className="container">
         <div className="row">
           <form className="col-md-7 py-5 col-12">
-            <h3 className="fs-1 mb-3">Rate Us</h3>
+            <h4 className="mb-3">Rate Us</h4>
             <div className="mb-3">
               <label htmlFor="name" className="form-label">
                 Name
               </label>
               <input
                 type="email"
-                className="form-control"
+                className="form-control text-black-50"
                 id="email"
                 placeholder="Jhon Doe"
                 style={{ borderRadius: "0" }}
@@ -40,7 +40,7 @@ function RatingForm() {
                 Message
               </label>
               <textarea
-                className="form-control"
+                className="form-control text-black-50"
                 id="message"
                 rows="3"
                 style={{ resize: "none", borderRadius: "0" }}
@@ -56,7 +56,7 @@ function RatingForm() {
             </button>
           </form>
           <div className="d-none col-md-5 ps-md-5 d-md-flex justify-content-md-center align-items-md-center">
-            <img src="/connect.png" alt="" style={{ height: "75%" }} />
+            <img src="/connect.png" alt="" style={{ height: "60%" }} />
           </div>
         </div>
       </div>
