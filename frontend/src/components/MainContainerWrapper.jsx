@@ -4,7 +4,7 @@ import MapPreview from "./MapPreview";
 
 function MainContainerWrapper({weatherInfo}) {
   return (
-    <div className="container">
+    <div className="container ps-3">
       <div className="row my-4">
         <div className="col-md-4 col-12 mx-md-0 my-2">
           <WeatherPreviewCard weatherInfo={weatherInfo} />

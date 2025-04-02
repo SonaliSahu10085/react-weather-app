@@ -11,7 +11,7 @@ import Tooltip from "@mui/material/Tooltip";
 function Navbar() {
   return (
     <AppBar position="fixed" className="bg-white">
-      <div className="container">
+      <div className="container ps-3">
         <Toolbar disableGutters>
           <Tooltip title="Welcome to weather app">
             <IconButton sx={{ p: 0, display: "flex", mr: 1, height: 30, width: 30 }}>
@@ -25,7 +25,7 @@ function Navbar() {
               mr: 2,
               display: "flex",
               flexGrow: 1,
-              fontSize: 28,
+              fontSize: 24,
               fontWeight: 700,
               letterSpacing: ".1rem",
               background: "linear-gradient(to right, #1E88E5, #4FC3F7)",
@@ -45,9 +45,9 @@ function Navbar() {
                     "_parent"
                   )
                 }
-                sx={{ p: 0 }}
+                sx={{ p: 0,}}
               >
-                <Avatar alt="Sonali Sahu" src="./myprofile.jpeg" />
+                <Avatar alt="Sonali Sahu" src="" sx={{height: "36px"}} />
               </IconButton>
             </Tooltip>
           </Box>

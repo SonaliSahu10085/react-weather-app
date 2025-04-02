@@ -34,7 +34,7 @@ export default function SearchBox({ weatherInfoHandler }) {
   };
 
   return (
-    <div className="container">
+    <div className="container ps-3">
       <Paper
         className="col-12 col-md-8 offset-md-2 offset-0"
         component="form"

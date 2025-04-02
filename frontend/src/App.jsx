@@ -18,6 +18,12 @@ function App() {
     coord: { lon: "", lat: "" },
   });
 
+  let [ratingFormData, setRatingFormData] = useState({});
+
+  const setFormDataHandler = (data) => {
+    setRatingFormData({ ...data });
+  };
+
   const BASE_URL = import.meta.env.VITE_BASE_URL;
   const APP_ID = import.meta.env.VITE_APP_ID;
 
@@ -48,8 +54,8 @@ function App() {
       <Navbar />
       <SearchBox weatherInfoHandler={weatherInfoHandler} />
       <MainContainerWrapper weatherInfo={weatherInfo} />
-      <RatingForm />
-      <Ratings />
+      <RatingForm setFormDataHandler={setFormDataHandler} />
+      <Ratings ratingFormData={ratingFormData} />
       <Footer />
     </>
   );
