@@ -32,7 +32,7 @@ function RatingForm({ setFormDataHandler }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:4500/api/ratings",
+        import.meta.env.VITE_BACKEND_BASE_URL,
         JSON.stringify(formData),
         {
           headers: {
@@ -40,7 +40,7 @@ function RatingForm({ setFormDataHandler }) {
           },
         }
       );
-      console.log("Response:", response.data);
+      // console.log("Response:", response.data);
       alert("Thank you for your feedback!");
       setFormDataHandler(formData);
       setFormData({ name: "", rating: 0, message: "" });

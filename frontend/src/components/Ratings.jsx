@@ -60,7 +60,7 @@ function Ratings({ ratingFormData }) {
   React.useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get("http://localhost:4500/api/ratings");
+        const response = await axios.get(import.meta.env.VITE_BACKEND_BASE_URL);
         console.log("Response:", response.data.data);
         setData([...response.data.data]);
       } catch (err) {
@@ -79,7 +79,7 @@ function Ratings({ ratingFormData }) {
       </div>
     </div>
   ) : (
-    <h1>No review</h1>
+    <h4>No Ratings</h4>
   );
 }
 
