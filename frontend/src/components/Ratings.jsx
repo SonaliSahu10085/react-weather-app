@@ -69,18 +69,25 @@ function Ratings({ ratingFormData }) {
     })();
   }, [ratingFormData]);
 
-  return data.length ? (
+  return (
     <div className="container py-5 ps-md-3 ps-4">
-      <h4>Ratings</h4>
-      <div className="row">
-        {data.map((rating, index) => (
-          <Card rating={rating} key={index} />
-        ))}
-      </div>
+      {!error ? (
+        data.length ? (
+          <>
+            <h4>Ratings</h4>
+            <div className="row">
+              {data.map((rating, index) => (
+                <Card rating={rating} key={index} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <h4>⭐ No ratings yet! Be the first to share your feedback. 📝</h4>
+        )
+      ) : (
+        <h4>⏳ Please wait! Loading....... </h4>
+      )}
     </div>
-  ) : (
-    <h4>No Ratings</h4>
   );
 }
-
 export default Ratings;
